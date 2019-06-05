@@ -1,0 +1,16 @@
+{
+  "stackOrchestrator": "swarm",
+  "auths": {
+    "https://index.docker.io/v1/": {}
+  },
+  "credsStore": "wincred",
+  "proxies":
+  {
+    "default":
+    {
+      "httpProxy": "http://10.10.10.10:8080",
+      "httpsProxy": "https://10.10.10.10:8080",
+      "noProxy": "*.tma.com.vn"
+    }
+  }
+}
