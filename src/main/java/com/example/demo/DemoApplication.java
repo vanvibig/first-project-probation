@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class DemoApplication {
 
+
 	@GetMapping("/hello")
 	public String world(){
 		return "world";
