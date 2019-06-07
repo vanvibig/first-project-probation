@@ -10,6 +10,6 @@ public class Demo {
         Hello hello = (Hello) context.getBean("helloProxy");
         hello.method1();
         hello.method2();
-        hello.method3();
+//        hello.method3();
     }
 }
