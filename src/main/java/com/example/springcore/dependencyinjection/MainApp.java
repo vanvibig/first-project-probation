@@ -1,4 +1,4 @@
-package com.example.springcore;
+package com.example.springcore.dependencyinjection;
 
 public class MainApp {
     public static void main(String[] args) {

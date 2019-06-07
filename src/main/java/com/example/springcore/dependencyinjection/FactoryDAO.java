@@ -1,4 +1,4 @@
-package com.example.springcore;
+package com.example.springcore.dependencyinjection;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -28,6 +28,10 @@ public class FactoryDAO {
 
             if (database.equals("3")) {
                 return new MSSQLDAO();
+            }
+
+            if (database.equals("4")) {
+                return new DB2DAO();
             }
 
         } catch (FileNotFoundException e) {

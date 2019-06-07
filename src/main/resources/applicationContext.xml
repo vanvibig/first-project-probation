@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    inject by constructor-->
+    <bean id="person" class="com.example.springcore.deoendencyinjectioncollection.Person">
+        <constructor-arg name="name" type="java.lang.String" value="spring"/>
+        <constructor-arg name="age" type="int" value="30"/>
+        <constructor-arg name="addresses">
+            <list>
+                <ref bean="address1"/>
+                <ref bean="address2"/>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="emails">
+            <list>
+                <value>abc@gmail.com</value>
+                <value>def@gmail.com</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+<!--    inject by setter-->
+
+    <bean id="person2" class="com.example.springcore.deoendencyinjectioncollection.Person">
+        <property name="name" value="stackjava.com"/>
+        <property name="age" value="25"/>
+        <property name="addresses">
+            <list>
+                <ref bean="address2"/>
+            </list>
+        </property>
+        <property name="emails">
+            <list>
+                <value>ghi@hotmail.com</value>
+                <value>klm@zzz.com</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="address1" class="com.example.springcore.deoendencyinjectioncollection.Address">
+        <property name="country" value="Viet Nam"/>
+        <property name="province" value="Can Tho"/>
+        <property name="district" value="Ninh Kieu"/>
+    </bean>
+
+    <bean id="address2" class="com.example.springcore.deoendencyinjectioncollection.Address">
+        <property name="country" value="Viet Nam"/>
+        <property name="province" value="Ca Mau"/>
+        <property name="district" value="Thoi Binh"/>
+    </bean>
+
+</beans>

@@ -1,4 +1,4 @@
-package com.example.springcore;
+package com.example.springcore.dependencyinjection;
 
 public class MySQLDAO implements AbstractDAO {
     @Override
